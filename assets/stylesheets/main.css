@@ -59,12 +59,37 @@ GRID
 				 		box-sizing: border-box;
 }
 
-.container {
+.container,
+.grid {
 	width: 960px;
-	padding: 0 30px 0 30px;
 	margin: 0 auto;
 }
 
+.container {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.col-1-3 {
+	width: 33.33%;
+}
+
+.col-2-3 {
+	width: 66.66%;
+}
+
+.col-1-3,
+.col-2-3 {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.grid,
+.col-1-3,
+.col-2-3 {
+	padding-left: 15px;
+	padding-right: 15px;
+}
 /*
 ========================================
 TYPOGRAPHY
@@ -100,4 +125,54 @@ HOME
 
 .hero {
 	padding: 22px 80px 66px 80px;
+}
+
+
+/*
+========================================
+CLEARFIX
+========================================
+*/
+
+.group:before,
+.group:after {
+	content: "";
+	display: table;
+}
+
+.group:after {
+	clear: both;
+}
+
+.group {
+	clear: both;
+	*zoom: 1;
+
+}
+
+/*
+========================================
+PRIMARY HEADER
+========================================
+*/
+
+.logo {
+	float: left;
+	border-top: 4px solid #648880;
+	padding: 40px 0 22px 0;
+}
+
+/*
+========================================
+PRIMARY FOOTER
+========================================
+*/
+
+.primary-footer {
+	padding-top: 44px;
+	padding-bottom: 44px;
+}
+
+.primary-footer small {
+	float: left;
 }
